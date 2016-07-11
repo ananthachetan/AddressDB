@@ -1,0 +1,24 @@
+html{
+  position:relative;
+  min-height:100%;
+}
+
+body{
+  padding-top:100px;
+  margin-bottom:100px;
+}
+
+footer{
+  position:absolute;
+  height:100px;
+}
+
+img.mylogo{
+  width:50px;
+}
+
+h2.title{
+  color:#2b4554;
+  text-align:center;
+}
+
