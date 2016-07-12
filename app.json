@@ -1,0 +1,6 @@
+{
+  "name": "AddressDB",
+  "description": "Customer Address Management app that provides CRUD operations on customer contacts",
+  "repository": "https://github.com/ananthachetan/AddressDB",
+  "logo": "https://node-js-sample.herokuapp.com/node.svg"
+}
