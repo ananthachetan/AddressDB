@@ -2,14 +2,14 @@
 <html>
 
 <head>
+    <title>AddressDB Home Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AddressDB Home Page</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/Pretty-Footer.css">
     <link rel="stylesheet" href="assets/css/Pretty-Header.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
 </head>
 
 <body>
@@ -23,14 +23,14 @@
                     <ul class="nav navbar-nav navbar-right links">
                         <li role="presentation"><a href="#"> LOGIN</a></li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"> <span class="caret"></span><img class="img-thumbnail img-responsive dropdown-image" src="assets/img/root icon.jpg"></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"> <span class="caret"></span><img class="img-thumbnail img-responsive dropdown-image" src="assets/img/root%20icon.jpg"></a>
                             <ul class="dropdown-menu dropdown-menu-right" role="menu">
                                 <li role="presentation"><a href="#">Add User</a></li>
                                 <li role="presentation" class="active"><a href="#">Logout </a></li>
                             </ul>
                         </li>
                         <li class="dropdown open">
-                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#"> <span class="caret"></span><img class="img-thumbnail img-responsive dropdown-image" src="assets/img/user icon.png"></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#"> <span class="caret"></span><img class="img-thumbnail img-responsive dropdown-image" src="assets/img/user%20icon.png"></a>
                             <ul class="dropdown-menu dropdown-menu-right" role="menu">
                                 <li role="presentation" class="active"><a href="#">Logout </a></li>
                             </ul>
@@ -51,8 +51,10 @@
                 <h6 class="text-center"> zis Technologies&nbsp; © 2016</h6></div>
         </footer>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="assets/bower_components/angular/angular.js"></script>
+    <script src="assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="app/app.module.js"></script>
 </body>
 
 </html>
