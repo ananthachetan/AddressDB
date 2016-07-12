@@ -1,3 +1,5 @@
-/**
- * Created by Ananth on 12/7/2016.
- */
+angular
+    .module('addressDB', [
+        'ui.bootstrap',
+        'ui.router'
+    ]);
