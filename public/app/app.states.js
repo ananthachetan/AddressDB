@@ -10,12 +10,11 @@ angular.module('addressDB')
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'app/components/home/views/home.view.html',
-                controller: "homeController",
-                controllerAs: 'ctrl'
+                templateUrl: 'app/components/home/home.view.html',
+                controller: "homeController As homeCtrl"
             })
             .state('404', {
                 url: '/404',
-                templateUrl: 'app/shared/404.html'
+                templateUrl: 'app/shared/404/404.html'
             });
     }]);
