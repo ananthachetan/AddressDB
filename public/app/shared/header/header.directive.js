@@ -1,3 +1,13 @@
-/**
- * Created by chetan on 13-07-2016.
- */
+(function () {
+    'use strict';
+
+    angular.module(addressDB)
+
+        .directive('mainMenu',[function () {
+            return{
+                templateUrl: 'header.view.html'
+            };
+        }]);
+});
+
+

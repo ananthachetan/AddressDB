@@ -4,7 +4,6 @@ angular
         'ui.router'
     ])
 
-    .constant('CONFIG',
-    {
-        ImagesLocation: 'public/assets/img'
+    .constant('CONFIG', {
+        "ImagesLocation" : 'public/assets/img'
     });
