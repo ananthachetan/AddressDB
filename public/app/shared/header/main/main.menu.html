@@ -1,25 +1,56 @@
 <div id="main_menu">
     <nav class="navbar navbar-default navbar-fixed-top custom-header">
         <div class="container-fluid">
-            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#"><span>Address DB</span></a>
-                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <!--Logo definition -->
+            <div class="navbar-header">
+                <a class="navbar-brand navbar-link" href="#">
+                    <span>Address DB</span>
+                </a>
+                <button class="navbar-toggle collapsed" ng-click="isNavCollapsed = !isNavCollapsed" >
+					<span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
+            <!-- login nav bar -->
+            <div class="collapse navbar-collapse" id="navbar-collapse" uib-collapse="isNavCollapsed">
                 <ul class="nav navbar-nav navbar-right links">
-                    <li role="presentation"><a href="#"> LOGIN</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"> <span class="caret"></span><img class="img-thumbnail img-responsive dropdown-image" src="assets/img/root%20icon.jpg"></a>
-                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                            <li role="presentation"><a href="#">Add User</a></li>
-                            <li role="presentation" class="active"><a href="#">Logout </a></li>
+                    <li role="presentation" ng-hide="isLoggedIn">
+                        <a href="#" ng-click="isLoggedIn = true"> LOGIN</a>
+                    </li>
+                    <li class="dropdown" ng-show="isLoggedIn" uib-dropdown>
+                        <a class="dropdown-toggle" uib-dropdown-toggle aria-expanded="false" href="#">
+							<span class="caret"></span>
+                            <img class="img-thumbnail img-responsive dropdown-image"
+                                 src="assets/img/user_icon.png">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu">
+                            <li role="presentation" class="active">
+                                <a href="#/lo" ng-click="isLoggedIn = false">Logout </a>
+                            </li>
                         </ul>
                     </li>
-                    <li class="dropdown open">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#"> <span class="caret"></span><img class="img-thumbnail img-responsive dropdown-image" src="assets/img/user%20icon.png"></a>
+
+                    <!-- Root features will be added next
+                                        <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">
+							<span
+                                    class="caret">
+							</span>
+                            <img class="img-thumbnail img-responsive dropdown-image"
+                                 src="assets/img/root%20icon.jpg">
+                        </a>
                         <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                            <li role="presentation" class="active"><a href="#">Logout </a></li>
+                            <li role="presentation">
+                                <a href="#">Add User</a>
+                            </li>
+                            <li role="presentation" class="active">
+                                <a href="#">Logout </a>
+                            </li>
                         </ul>
-                    </li>
+                    </li> -->
+
                 </ul>
             </div>
         </div>

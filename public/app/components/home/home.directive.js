@@ -8,6 +8,7 @@
                 restrict: 'AE',
                 link:function ($scope, $elements, $attrs) {
                     $scope.imageLocation = config.ImagesLocation + "/home_image.jpg";
+                    $scope.userDetails = {};
                 }
             };
         }]);
