@@ -1,13 +1,16 @@
 (function () {
-   'use strict';
+    'use strict';
+    angular.module('addressDB')
 
-    angular.module(addressDB)
-
-        .directive('homeView', [function () {
-            return{
-                templateUrl: 'home.view.html',
-                restrict: 'AE'
-            }
+        .directive('homeView', ['CONFIG', function (config) {
+            return {
+                templateUrl: 'app/components/home/home.view.html',
+                restrict: 'AE',
+                link:function ($scope, $elements, $attrs) {
+                    $scope.imageLocation = config.ImagesLocation + "/map.jpg";
+                }
+            };
         }]);
+})();
 
-});
+

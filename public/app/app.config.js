@@ -1,9 +1,14 @@
-angular
-    .module('addressDB', [
+(function () {
+    'use strict';
+
+    angular.module('addressDB', [
         'ui.bootstrap',
         'ui.router'
     ])
+        .constant('CONFIG', {
+            "ImagesLocation" : 'assets/img'
+        });
 
-    .constant('CONFIG', {
-        "ImagesLocation" : 'public/assets/img'
-    });
+})();
+
+
