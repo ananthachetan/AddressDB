@@ -1,0 +1,40 @@
+h2.title {
+    color: #2b4554;
+    text-align: center;
+}
+
+h4.tag {
+    color: #7f8f98;
+    text-align: center;
+}
+
+div.jumbotron.homepage {
+    margin: 0;
+    background: white; /* For browsers that do not support gradients */
+    background: linear-gradient(to bottom, white, #f3f3f3); /* Standard syntax (must be last) */
+}
+
+img.homepage {
+    content: url("../img/home_image.jpg");
+}
+
+/* For devices 1600px and larger: */
+@media only screen and (min-device-width: 1600px) {
+    div.jumbotron.homepage {
+        margin: 0;
+        background: black;
+    }
+
+    img.homepage {
+        content: url("../img/big_home_image.jpg");
+    }
+
+    h2.title {
+        color: white;
+    }
+
+    h4.tag {
+        color: floralwhite;
+        text-align: center;
+    }
+}

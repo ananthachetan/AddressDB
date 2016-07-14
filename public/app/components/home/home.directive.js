@@ -7,7 +7,7 @@
                 templateUrl: 'app/components/home/home.view.html',
                 restrict: 'AE',
                 link:function ($scope, $elements, $attrs) {
-                    $scope.imageLocation = config.ImagesLocation + "/map.jpg";
+                    $scope.imageLocation = config.ImagesLocation + "/home_image.jpg";
                 }
             };
         }]);
