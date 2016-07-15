@@ -12,6 +12,7 @@ div.jumbotron.homepage {
     margin: 0;
     background: white; /* For browsers that do not support gradients */
     background: linear-gradient(to bottom, white, #f3f3f3); /* Standard syntax (must be last) */
+    animation: pulse 0.5s 2s 2;
 }
 
 img.homepage {

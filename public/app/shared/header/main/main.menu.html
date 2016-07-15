@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <!--Logo definition -->
             <div class="navbar-header">
-                <a class="navbar-brand navbar-link" href="#">
+                <a class="navbar-brand navbar-link brand" href="#">
                     <span>Address DB</span>
                 </a>
                 <button class="navbar-toggle collapsed" ng-click="isNavCollapsed = !isNavCollapsed" >
@@ -15,9 +15,9 @@
             </div>
             <!-- login nav bar -->
             <div class="collapse navbar-collapse" id="navbar-collapse" uib-collapse="isNavCollapsed">
-                <ul class="nav navbar-nav navbar-right links">
+                <ul class="nav navbar-nav navbar-right links nav-animate">
                     <li role="presentation" ng-hide="isLoggedIn">
-                        <a href="#" ng-click="isLoggedIn = true"> LOGIN</a>
+                        <a href="#" ng-click="isLoggedIn = true">LOGIN</a>
                     </li>
                     <li class="dropdown" ng-show="isLoggedIn" uib-dropdown>
                         <a class="dropdown-toggle" uib-dropdown-toggle aria-expanded="false" href="#">

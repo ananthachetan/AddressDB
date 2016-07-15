@@ -98,3 +98,12 @@ img.dropdown-image{
   color:#e9ac09 !important;
 }
 
+/*Animations*/
+
+.brand {
+  animation: fadeInLeft 2s;
+}
+
+.nav-animate {
+  animation: fadeInRight 1s;
+}
