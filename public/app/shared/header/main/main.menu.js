@@ -11,7 +11,7 @@
                     userInfo: '='
                 },
                 link: function ($scope, $elements, $attr) {
-                    $scope.isNavCollapsed = false;
+                    $scope.isNavCollapsed = true;
                     $scope.isLoggedIn = Object.keys($scope.userInfo).length != 0;
                 }
             };
