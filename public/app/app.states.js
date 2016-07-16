@@ -16,6 +16,11 @@
                     template: '<home-view></home-view>'
                 })
 
+                .state('login', {
+                    url: '/login',
+                    template: '<login-view></login-view>'
+                })
+
                 .state('404', {
                     url: '/404',
                     templateUrl: 'app/shared/404/404.html'

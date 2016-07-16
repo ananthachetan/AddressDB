@@ -14,12 +14,12 @@
                 </button>
             </div>
             <!-- login nav bar -->
-            <div class="collapse navbar-collapse" id="navbar-collapse" uib-collapse="isNavCollapsed">
-                <ul class="nav navbar-nav navbar-right links nav-animate">
-                    <li role="presentation" ng-hide="isLoggedIn">
-                        <a href="#" ng-click="isLoggedIn = true">LOGIN</a>
+            <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+                <ul class="nav navbar-nav navbar-right links">
+                    <li role="presentation" ng-if="!isLoggedIn">
+                        <a ui-sref="login">LOGIN</a>
                     </li>
-                    <li class="dropdown" ng-show="isLoggedIn" uib-dropdown>
+                    <li class="dropdown" ng-if="isLoggedIn" uib-dropdown>
                         <a class="dropdown-toggle" uib-dropdown-toggle aria-expanded="false" href="#">
 							<span class="caret"></span>
                             <img class="img-thumbnail img-responsive dropdown-image"
@@ -27,7 +27,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu">
                             <li role="presentation" class="active">
-                                <a href="#" ng-click="isLoggedIn = false">Logout </a>
+                                <a href="#">Logout</a>
                             </li>
                         </ul>
                     </li>

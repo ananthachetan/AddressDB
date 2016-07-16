@@ -1,11 +1,17 @@
 html {
     position: relative;
     min-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     padding-top: 90px;
     margin-bottom: 100px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
 }
 
 footer {
