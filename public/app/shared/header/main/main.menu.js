@@ -13,7 +13,6 @@
                 },
                 link: function ($scope, $elements, $attr) {
                     $scope.isNavCollapsed = true;
-                    $scope.isLoggedIn = Object.keys($scope.userInfo).length != 0;
                 }
             };
         }]);

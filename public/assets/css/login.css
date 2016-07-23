@@ -5,10 +5,12 @@
   border-radius:2px;
   box-shadow:0 0 20px #444444;
   animation: fadeInRight .5s;
-  margin: 20px auto;
+  margin: auto;
 }
 .login-view {
   background-color: #a0d6b4;
+  height: 100%;
+  width: 100%;
 }
 
 .login-card .profile-img-card{

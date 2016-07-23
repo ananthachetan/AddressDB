@@ -4,10 +4,12 @@
     angular.module('addressDB', [
         'ui.bootstrap',
         'ui.router',
-        'ngAnimate'
+        'ngAnimate',
+        'firebase'
     ])
         .constant('CONFIG', {
-            "ImagesLocation" : 'assets/img'
+            'ImagesLocation' : 'assets/img',
+            'FirebaseURL' : 'https://addressdb-37891.firebaseio.com/'
         });
 
 })();

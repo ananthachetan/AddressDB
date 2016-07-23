@@ -22,7 +22,7 @@
 
 <body>
     <!-- start dynamic content -->
-    <div ui-view></div>
+    <div class="container-view" ui-view></div>
     <!-- end dynamic content -->
 
     <footer id="footer">
@@ -37,13 +37,19 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-animate.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.0.1/angularfire.min.js"></script>
 <!--<script src="assets/bower_components/angular/angular.js"></script>
 <script src="assets/bower_components/angular-animate/angular-animate.js"></script>
 <script src="assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<script src="assets/bower_components/angular-ui-router/release/angular-ui-router.js"></script>-->
+<script src="assets/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="assets/bower_components/firebase/firebase.js"></script>
+<script src="assets/bower_components/angularfire/dist/angularfire.js"></script>
+-->
 <script src="app/app.config.js"></script>
 <script src="app/app.states.js"></script>
 <script src="app/components/home/home.js"></script>
 <script src="app/shared/header/main/main.menu.js"></script>
 <script src="app/components/login/login.js"></script>
+<script src="app/services/firebase.auth.js"></script>
 </html>
