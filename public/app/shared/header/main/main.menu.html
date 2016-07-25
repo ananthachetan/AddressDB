@@ -15,72 +15,73 @@
             </div>
 
             <!-- Nav bar -->
-            <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed" ng-switch on="page">
+            <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+                <ng-switch on="page">
 
+                    <!-- User buttons -->
+                    <ul class="nav navbar-nav navbar-right links">
 
-                <!-- User buttons -->
-                <ul class="nav navbar-nav navbar-right links">
+                        <li role="presentation" ng-switch-when="home">
+                            <a ui-sref="login">LOGIN</a>
+                        </li>
+                        <li class="dropdown" ng-switch-when="info" uib-dropdown>
+                            <a class="dropdown-toggle" uib-dropdown-toggle aria-expanded="false" href="#">
+                                <span class="caret"></span>
+                                <img class="img-thumbnail img-responsive dropdown-image"
+                                     src="assets/img/user_icon.png">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu">
+                                <li role="presentation" class="active">
+                                    <a href="#">LOGOUT</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Root features will be added next
+                                            <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">
+                                <span
+                                        class="caret">
+                                </span>
+                                <img class="img-thumbnail img-responsive dropdown-image"
+                                     src="assets/img/root%20icon.jpg">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li role="presentation">
+                                    <a href="#">Add User</a>
+                                </li>
+                                <li role="presentation" class="active">
+                                    <a href="#">Logout </a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
 
-                    <li role="presentation" ng-switch-when="home">
-                        <a ui-sref="login">LOGIN</a>
-                    </li>
-                    <li class="dropdown" ng-switch-when="info" uib-dropdown>
-                        <a class="dropdown-toggle" uib-dropdown-toggle aria-expanded="false" href="#">
-                            <span class="caret"></span>
-                            <img class="img-thumbnail img-responsive dropdown-image"
-                                 src="assets/img/user_icon.png">
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu">
-                            <li role="presentation" class="active">
-                                <a href="#">LOGOUT</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Root features will be added next
-                                        <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">
-                            <span
-                                    class="caret">
-                            </span>
-                            <img class="img-thumbnail img-responsive dropdown-image"
-                                 src="assets/img/root%20icon.jpg">
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                            <li role="presentation">
-                                <a href="#">Add User</a>
-                            </li>
-                            <li role="presentation" class="active">
-                                <a href="#">Logout </a>
-                            </li>
-                        </ul>
-                    </li> -->
-                </ul>
-
-                <!-- Address Edit Bar -->
-                <ul class="nav navbar-nav navbar-right" ng-switch-when="info">
-                    <li>
-                        <a href="#" class="btn main-btn">
-                            <span class="glyphicon glyphicon-plus"></span>
-                        </a>
-                    <li>
-                        <a href="#" class="btn main-btn">
-                            <span class="glyphicon glyphicon-edit"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn main-btn">
-                            <span class="glyphicon glyphicon-remove"></span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav nav-justified" ng-switch-when="info">
-                    <li>
-                        <div class="form-group has-feedback search-bar">
-                            <input type="text" class="form-control" placeholder="Search address">
-                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                        </div>
-                    </li>
-                </ul>
+                    <!-- Address Edit Bar -->
+                    <ul class="nav navbar-nav navbar-right" ng-switch-when="info">
+                        <li>
+                            <a href="#" class="btn main-btn">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </a>
+                        <li>
+                            <a href="#" class="btn main-btn">
+                                <span class="glyphicon glyphicon-edit"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn main-btn">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-justified" ng-switch-when="info">
+                        <li>
+                            <div class="form-group has-feedback search-bar">
+                                <input type="text" class="form-control" placeholder="Search address">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </ng-switch>
             </div>
         </div>
     </nav>

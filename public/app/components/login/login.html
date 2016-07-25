@@ -2,15 +2,22 @@
     <!-- Main menu -->
     <main-menu page="login"></main-menu>
     <!-- Login View -->
-    <div class="container-view" style="position: fixed;">
+    <div>
         <div id="login" class="login-card">
             <img class="img-thumbnail img-responsive profile-img-card">
             <p class="profile-name-card">Login</p>
-            <form class="form-signin" role="form">
-                <span class="reauth-email">Validation</span>
-                <input class="form-control" type="email" required placeholder="Username" autofocus>
-                <input class="form-control" type="password" required placeholder="Password">
-                <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Sign in</button>
+            <form name="loginForm" class="form-signin" role="form" ng-submit="login()" novalidate>
+                <span class="reauth-email" ng-model="form.validationMsg" ng-show="loginForm.$invalid && !loginForm.$pristine">InValid</span>
+
+                <div ng-class="{'has-error': loginForm.emailID.$invalid && !loginForm.emailID.$untouched, 'has-success':loginForm.emailID.$valid}">
+                    <input name="emailID" class="form-control" type="email" required placeholder="Email" autofocus ng-model="user.emailID">
+                </div>
+
+                <div ng-class="{'has-error': loginForm.password.$invalid && !loginForm.password.$untouched, 'has-success':loginForm.password.$valid}">
+                    <input name="password" class="form-control" type="password" required placeholder="Password" ng-model="user.password">
+                </div>
+
+                <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Login</button>
             </form>
             <a href="#" class="forgot-password">Forgot your password?</a>
         </div>

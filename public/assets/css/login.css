@@ -5,12 +5,7 @@
   border-radius:2px;
   box-shadow:0 0 20px #444444;
   animation: fadeInRight .5s;
-  margin: auto;
-}
-.login-view {
-  background-color: #a0d6b4;
-  height: 100%;
-  width: 100%;
+  margin: 5% auto;
 }
 
 .login-card .profile-img-card{
@@ -56,13 +51,6 @@
   color:#000000;
 }
 
-.login-card .form-signin .form-control:focus{
-  border-color:#5f9ea0;
-  outline:0;
-  -webkit-box-shadow:inset 0 1px 1px #323232,0 0 8px #5f9ea0;
-  box-shadow:inset 0 1px 1px #323232,0 0 8px #5f9ea0;
-}
-
 .login-card .btn.btn-signin{
   font-weight:700;
   height:36px;
@@ -85,5 +73,12 @@
 
 .login-card .forgot-password:hover, .login-card .forgot-password:active, .login-card .forgot-password:focus{
   color:#317873;
+}
+
+/* For devices 320px and smaller: */
+@media only screen and (max-device-width: 320px) {
+  .login-card{
+    margin: auto;
+  }
 }
 
