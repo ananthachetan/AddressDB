@@ -6,8 +6,11 @@
         <div id="login" class="login-card">
             <img class="img-thumbnail img-responsive profile-img-card">
             <p class="profile-name-card">Login</p>
-            <form name="loginForm" class="form-signin" role="form" ng-submit="login()" novalidate>
-                <span class="reauth-email" ng-model="form.validationMsg" ng-show="loginForm.$invalid && !loginForm.$pristine">InValid</span>
+            <form name="loginForm" class="form-signin" role="form" ng-submit="loginForm.$valid && submitLoginForm()" novalidate>
+
+                <div ng-class="{'has-error': !loginForm.$pristine && loginForm.$invalid}">
+                    <span class="reauth-email" >{{user.validationMsg}}</span>
+                </div>
 
                 <div ng-class="{'has-error': loginForm.emailID.$invalid && !loginForm.emailID.$untouched, 'has-success':loginForm.emailID.$valid}">
                     <input name="emailID" class="form-control" type="email" required placeholder="Email" autofocus ng-model="user.emailID">
