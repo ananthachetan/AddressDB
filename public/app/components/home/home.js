@@ -2,16 +2,21 @@
     'use strict';
     angular.module('addressDB')
 
-        .directive('homeView', ['CONFIG', function (config) {
+        .directive('homeView', [function () {
             return {
                 templateUrl: 'app/components/home/homepage.html',
                 restrict: 'AE',
-                link:function ($scope, $elements, $attrs) {
-                    $scope.imageLocation = config.ImagesLocation + "/home_image.jpg";
-                    $scope.userDetails = {};
-                }
+                scope: {},
+                controller: HomeController,
+                controllerAs: 'vm',
+                bindToController: true
             };
         }]);
+
+    function HomeController() {
+        var vm = this;
+        vm.userDetails = {};
+    }
 })();
 
 

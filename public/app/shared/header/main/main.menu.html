@@ -16,7 +16,7 @@
 
             <!-- Nav bar -->
             <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
-                <ng-switch on="page">
+                <ng-switch on="vm.page">
 
                     <!-- User buttons -->
                     <ul class="nav navbar-nav navbar-right links">
@@ -32,7 +32,7 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu">
                                 <li role="presentation" class="active">
-                                    <a href="#">LOGOUT</a>
+                                    <a href="" ng-click="vm.logOut()">LOGOUT</a>
                                 </li>
                             </ul>
                         </li>

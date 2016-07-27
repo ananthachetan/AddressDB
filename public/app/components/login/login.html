@@ -5,20 +5,64 @@
     <div>
         <div id="login" class="login-card">
             <img class="img-thumbnail img-responsive profile-img-card">
-            <p class="profile-name-card">Login</p>
-            <form name="loginForm" class="form-signin" role="form" ng-submit="loginForm.$valid && submitLoginForm()" novalidate>
+            <p class="profile-name-card" ng-bind="vm.formTitle"></p>
+            <form name="loginForm" class="form-signin" role="form" ng-submit="loginForm.$valid && vm.submitLoginForm()"
+                  novalidate>
 
-                <div ng-class="{'has-error': !loginForm.$pristine && loginForm.$invalid}">
-                    <span class="reauth-email" >{{user.validationMsg}}</span>
+                <!-- For server side validation msg -->
+                <div class="validation-box text-danger" ng-if="vm.user.validationMsg">
+                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                    <p ng-bind="vm.user.validationMsg"></p>
                 </div>
 
-                <div ng-class="{'has-error': loginForm.emailID.$invalid && !loginForm.emailID.$untouched, 'has-success':loginForm.emailID.$valid}">
-                    <input name="emailID" class="form-control" type="email" required placeholder="Email" autofocus ng-model="user.emailID">
+                <div class="form-group"
+                     ng-class="{'has-error': loginForm.emailID.$invalid && !loginForm.emailID.$untouched, 'has-success':loginForm.emailID.$valid}">
+                    <!--Email input-->
+                    <input name="emailID"
+                           class="form-control"
+                           type="email"
+                           placeholder="Email"
+                           autofocus required
+                           ng-model="vm.user.emailID">
+                    <!--Email error-->
+                    <div ng-show="loginForm.$submitted">
+                        <span ng-show="loginForm.emailID.$error.required" class="help-block">Email is required</span>
+                        <span ng-show="loginForm.emailID.$error.email" class="help-block">Please enter a valid email</span>
+                    </div>
                 </div>
 
-                <div ng-class="{'has-error': loginForm.password.$invalid && !loginForm.password.$untouched, 'has-success':loginForm.password.$valid}">
-                    <input name="password" class="form-control" type="password" required placeholder="Password" ng-model="user.password">
+                <div class="form-group"
+                     ng-class="{'has-error': loginForm.password.$invalid && !loginForm.password.$untouched, 'has-success':loginForm.password.$valid}">
+                    <!--Password input-->
+                    <input name="password"
+                           class="form-control"
+                           type="password"
+                           required ng-minlength="5" ng-maxlength="20"
+                           placeholder="Password"
+                           ng-model="vm.user.password">
+                    <!--Password error-->
+                    <div ng-show="loginForm.$submitted">
+                        <span ng-show="loginForm.password.$error.required" class="help-block">Password is required</span>
+                        <span ng-show="loginForm.password.$error.minlength" class="help-block">Password is too short</span>
+                        <span ng-show="loginForm.password.$error.maxlength" class="help-block">Password is too long</span>
+                    </div>
                 </div>
+
+<!--                <div class="form-group"
+                     ng-class="{'has-error': loginForm.confirmPassword.$invalid && !loginForm.confirmPassword.$untouched, 'has-success':loginForm.confirmPassword.$valid}">
+                    &lt;!&ndash;Password input&ndash;&gt;
+                    <input name="confirmPassword"
+                           class="form-control"
+                           type="password"
+                           required
+                           placeholder="Confirm password"
+                           ng-model="vm.user.confirmPassword">
+                    &lt;!&ndash;Password error&ndash;&gt;
+                    <div ng-show="loginForm.$submitted">
+                        <span ng-show="loginForm.password.$error.required" class="help-block">Password is required</span>
+                        <span ng-show="(vm.user.password).indexOf(vm.user.confirmPassword) !== 0" class="help-block">Password don't match</span>
+                    </div>
+                </div>-->
 
                 <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Login</button>
             </form>
@@ -26,3 +70,5 @@
         </div>
     </div>
 </div>
+
+

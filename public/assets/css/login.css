@@ -20,20 +20,19 @@
   font-size:16px;
   font-weight:bold;
   text-align:center;
-  min-height:1em;
+  padding: 5px;
 }
 
-.login-card .reauth-email{
+.login-card .validation-box{
   display:block;
-  color:#404040;
-  line-height:2;
   margin-bottom:10px;
   font-size:14px;
   text-align:center;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
   box-sizing:border-box;
+}
+
+.validation-box .glyphicon {
+  font-size: 2.0em;
 }
 
 .login-card .form-signin input[type=email], .login-card .form-signin input[type=password], .login-card .form-signin input[type=text], .login-card .form-signin button{
@@ -41,7 +40,6 @@
   font-size:16px;
   width:100%;
   display:block;
-  margin-bottom:10px;
   z-index:1;
   position:relative;
   box-sizing:border-box;

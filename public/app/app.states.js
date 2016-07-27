@@ -7,7 +7,7 @@
 
             $rootScope.$on("$stateChangeError", function (event, toState, toParams, fromState, fromParams, error) {
                 if (error === "AUTH_REQUIRED") {
-                    $state.go('login');
+                    $state.go('login', {destination : toState});
                 }
             });
         }])
@@ -34,7 +34,8 @@
 
                 .state('addressList', {
                     url: '/address/list',
-                    template: '<address-list></address-list>'
+                    template: '<address-list></address-list>',
+                    resolve : { 'user': resolveUser }
                 })
 
                 .state('404', {
@@ -42,4 +43,14 @@
                     templateUrl: 'app/shared/404/404.html'
                 });
         }]);
+
+    ///
+
+    resolveUser.$inject = ['AuthService'];
+
+    function resolveUser(authService) {
+        return authService.requireLogin();
+    }
+
+
 })();
