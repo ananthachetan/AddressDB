@@ -24,13 +24,13 @@
     
     function MainMenuController(authService, $state) {
         var vm = this;
-
         vm.isNavCollapsed = true;
+
 
         vm.logOut = function(){
             authService.logout();
             $state.go('home');
-        }
+        };
     }
 })();
 
