@@ -5,11 +5,13 @@
 
         .factory('AuthService', authService)
 
-        .run(['$rootScope', 'AuthService','$log', function ($rootScope, AuthService, $log) {
+        .run(['AuthService', '$log', '$state', function (AuthService, $log, $state) {
             // track status of authentication
             AuthService.firebaseAuthObject.$onAuthStateChanged(function (user) {
-                $rootScope.loggedUser = user;
-                $log.info("Logged in user: " + JSON.stringify(user))
+                if (!user) {
+                    $log.info("Logged out successfully");
+                    $state.go('home');
+                }
             });
         }]);
 

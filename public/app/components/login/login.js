@@ -36,7 +36,7 @@
                     if ($stateParams.toWhere != null) {
                         $state.go($stateParams.toWhere.name);
                     } else {
-                        console.log("Signed in as:", JSON.stringify(firebaseUser));
+                        console.log("Signed in as:", JSON.stringify(firebaseUser.email));
                         $state.go('addressList');
                     }
                 }).catch(function (error) {

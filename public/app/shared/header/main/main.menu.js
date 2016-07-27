@@ -29,7 +29,6 @@
 
         vm.logOut = function(){
             authService.logout();
-            $state.go('home');
         };
     }
 })();
