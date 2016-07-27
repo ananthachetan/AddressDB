@@ -8,8 +8,7 @@
         'firebase'
     ])
         .constant('CONFIG', {
-            'ImagesLocation' : 'assets/img',
-            'FirebaseURL' : 'https://addressdb-37891.firebaseio.com/'
+            'ImagesLocation' : 'assets/img'
         });
 
 })();
