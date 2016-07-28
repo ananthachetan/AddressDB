@@ -5,7 +5,8 @@
         'ui.bootstrap',
         'ui.router',
         'ngAnimate',
-        'firebase'
+        'firebase',
+        'ui.grid'
     ])
         .constant('CONFIG', {
             'ImagesLocation' : 'assets/img'

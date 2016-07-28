@@ -34,8 +34,10 @@
 
                 .state('addressList', {
                     url: '/address/list',
-                    template: '<address-list></address-list>',
-                    resolve : { 'user': resolveUser }
+                    template: '<address-list user-details="vm.userDetails"></address-list>',
+                    resolve : { 'user': resolveUser },
+                    controller: AddressController,
+                    controllerAs: 'vm'
                 })
 
                 .state('404', {
@@ -47,10 +49,13 @@
     ///
 
     resolveUser.$inject = ['AuthService'];
-
     function resolveUser(authService) {
         return authService.requireLogin();
     }
 
+    function AddressController(user) {
+        var vm = this;
+        vm.userDetails = user;
+    }
 
 })();

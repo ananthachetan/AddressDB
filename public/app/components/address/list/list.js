@@ -10,15 +10,18 @@
                 scope:{},
                 controller: AddressListController,
                 controllerAs: 'vm',
-                bindToController: true
+                bindToController: {
+                    userDetails: '='
+                }
             }
         }]);
 
     ////
 
-    function AddressListController() {
+    AddressListController.inject = ['$log'];
+    function AddressListController($log) {
         var vm = this;
-        console.log("Im here");
+        $log.info("User Details: " + JSON.stringify(vm.userDetails));
     }
 
 })();
